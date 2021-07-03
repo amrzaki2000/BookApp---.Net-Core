@@ -33,7 +33,7 @@ namespace BookApp.Pages.BookLList
         public async Task<IActionResult> OnPost()
         {
             if (ModelState.IsValid)
-            {  
+            {
                 // Updating BookInfo
                 var BookDB = await db.Book.FindAsync(Book.CreateID);
                 BookDB.BookName = Book.BookName;
@@ -50,6 +50,8 @@ namespace BookApp.Pages.BookLList
                 return Page();                  //If state is not valid, stay at the same page
             }
         }
+
        
+
     }
 }

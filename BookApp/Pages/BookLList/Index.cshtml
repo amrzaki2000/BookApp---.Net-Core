@@ -45,7 +45,7 @@
                                     @Html.DisplayFor(m => item.BookGenre);
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger btn-sm text-white">Delete</a>
+                                    <button asp-page-handler="Delete" asp-route-id="@item.CreateID" onclick="return confirm('Are you sure that you want to delete this book ?')" class="btn btn-danger btn-sm text-white">Delete</button>
                                     <a class="btn btn-info btn-sm" asp-page="EditBook" asp-route-id="@item.CreateID">Edit</a>
                                 </td>
                             </tr>
