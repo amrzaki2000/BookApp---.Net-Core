@@ -1,0 +1,57 @@
+﻿@page
+@model BookApp.Pages.BookLList.EditBookModel
+@{
+}
+<h2 class="text-info">Edit Book</h2>
+<div class="container border p-5 border-dark">
+    <form method="post">
+        <input type="hidden" asp-for="Book.CreateID" />
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="row form-group">
+
+            <div class="col-4">
+                <label asp-for="Book.BookName"></label>
+            </div>
+            <div class="col-6">
+                <input class="form-control" asp-for="Book.BookName" />
+            </div>
+            <div class="col-2">
+                <span asp-validation-for="Book.BookName" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="row form-group">
+            <div class="col-4">
+                <label asp-for="Book.Author"></label>
+            </div>
+            <div class="col-6">
+                <input class="form-control" asp-for="Book.Author" />
+            </div>
+            <div class="col-2">
+                <span asp-validation-for="Book.Author" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-4">
+                <label asp-for="Book.BookGenre"></label>
+            </div>
+            <div class="col-6">
+                <select class="form-control" asp-for="Book.BookGenre">
+                    <option>Action</option>
+                    <option>Arts</option>
+                    <option>Adventure</option>
+                    <option>Drama</option>
+                    <option>Science Fiction</option>
+                </select>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-6">
+                <input class="form-control btn btn-primary" type="submit" value="Update" />
+            </div>
+            <div class="col-6">
+                <a asp-page="Index" class="btn btn-warning form-control">BooksList</a>
+            </div>
+        </div>
+    </form>
+</div>

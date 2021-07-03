@@ -33,21 +33,22 @@
                         </tr>
                         @foreach (var item in Model.Books)
                         {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(m => item.BookName);
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.Author);
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.BookGenre);
-                        </td>
-                        <td>
-                            <button class="btn btn-danger btn-sm">Delete</button>
-                            <button class="btn btn-info btn-sm">Edit</button>
-                        </td>
-                    </tr>
+
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(m => item.BookName);
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.Author);
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.BookGenre);
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger btn-sm text-white">Delete</a>
+                                    <a class="btn btn-info btn-sm" asp-page="EditBook" asp-route-id="@item.CreateID">Edit</a>
+                                </td>
+                            </tr>
 
 
                         }
